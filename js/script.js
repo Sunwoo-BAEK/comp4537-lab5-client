@@ -108,6 +108,11 @@ class PatientBook {
         }
     }
 
+    async insertDefault() {
+        this.queryInput.value = "INSERT INTO patients (name, dateOfBirth) VALUES ('Alice', '1990-01-01'), ('Bob', '1991-02-02'), ('Charlie', '1992-03-03')";
+        this.sendQuery();
+    }
+
     displayResponse(message) {
         if (message) {
             this.responseDiv.innerText = message;
@@ -121,11 +126,13 @@ class Main {
         document.getElementById('app-name').innerText = app_name_string;
         document.getElementById('sqlQuery').placeholder = text_area_placeholder_string;
         document.getElementById('button-string').innerText = button_string;
+        document.getElementById('insert-default').innerText = insert_default_string;
         document.title = title_string;
 
         // New instance of PatientBook
         this.patientBook = new PatientBook("https://lionfish-app-u8snj.ondigitalocean.app/sql/");
-        document.querySelector("button").addEventListener("click", () => this.patientBook.sendQuery());
+        document.getElementById('button-string').addEventListener("click", () => this.patientBook.sendQuery());
+        document.getElementById('insert-default').addEventListener("click", () => this.patientBook.insertDefault());
     }
 }
 document.addEventListener("DOMContentLoaded",() => new Main());
