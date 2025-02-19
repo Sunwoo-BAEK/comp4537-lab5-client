@@ -24,5 +24,28 @@ button {
     padding: 10px;
     border: 1px solid #ccc;
     min-height: 50px;
-    background: #f9f9f9;
+    background: #ffffff;
+}
+
+table {
+    width: 100%; /* Full width of the parent container */
+    border-collapse: collapse; /* Merge borders between cells */
+    margin: 20px 0; /* Space above and below the table */
+    /* font-family: Arial, sans-serif; */
+}
+
+th, td {
+    border: 1px solid #dddddd; /* Light gray border for cells */
+    text-align: left; /* Align text to the left */
+    padding: 8px; /* Padding inside cells */
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for header */
+    color: #333; /* Dark text color for header */
+}
+
+td {
+    vertical-align: middle; /* Center content vertically */
+    background-color: #ffffff;
 }

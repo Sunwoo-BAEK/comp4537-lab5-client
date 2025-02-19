@@ -8,4 +8,5 @@ only_select_insert_string = "Error: Only SELECT and INSERT queries are allowed";
 patient_string = "Patient: ";
 date_of_birth_string = "Date of Birth: ";
 successful_insert_string = "Successfully inserted: ";
+select_failed_string = "Database query failed: ";
 no_records_string = "No records were inserted.";
