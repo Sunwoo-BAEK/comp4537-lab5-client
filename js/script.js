@@ -110,7 +110,8 @@ class PatientBook {
 
     async insertDefault() {
         this.queryInput.value = "INSERT INTO patients (name, dateOfBirth) VALUES ('Alice', '1990-01-01'), ('Bob', '1991-02-02'), ('Charlie', '1992-03-03')";
-        this.sendQuery();
+        await this.sendQuery();
+        this.queryInput.value = "";
     }
 
     displayResponse(message) {
